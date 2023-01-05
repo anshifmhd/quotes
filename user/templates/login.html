@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block content %}
+
+
+
+
+<div class="body">
+    <div class="row" >
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4" align="center">
+            <h1>login</h1>
+            <hr>
+           <form action="" method="POST">
+            {% csrf_token %}
+            <div class="row" >
+                <input type="text" name="username" id="username" placeholder="enter your username">
+            </div>
+            <div class="row">
+                <input type="password" name="password" id="password" placeholder="enter password">
+            </div>
+            <br>
+            <small style="color: red;">{{message}}</small>
+            <div class="row"><input type="submit" name="submit" id="submit" value="login"></div>
+           </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+{% endblock %}
